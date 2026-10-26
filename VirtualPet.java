@@ -21,10 +21,20 @@ public class VirtualPet {
       // hunger < 10
       // energy > 0
       // choice != 5
-
-         // TODO 2:
+   while (happiness < 15) {
+    if (hunger < 10) {
+    if (energy > 0) {
+    if (choice != 5) {
+    
+           
+     
+        // TODO 2:
          // Display happiness, hunger, and energy.
-         
+         System.out.println("happiness: " + happiness);
+         System.out.println("hunger: " + hunger);
+         System.out.println("energy: " + energy);
+      
+
          System.out.println("What would you like to do?");
          System.out.println("1. Feed");
          System.out.println("2. Play");
@@ -33,7 +43,7 @@ public class VirtualPet {
          System.out.println("5. Quit");
          
          choice = input.nextInt();
-         
+          
          // TODO 3:
          // Create an if / else if / else statement
          // to handle the player's choice.
@@ -42,6 +52,29 @@ public class VirtualPet {
          // to the table in the instructions.
          //
          // Print a funny message for each action.
+         if (choice == 1) {
+         hunger -= 6;
+         happiness -= 3;
+         energy -= 2;
+         System.out.println("you fed the thing,awesome"); 
+    } else if (choice == 2) {
+         energy -= 10;
+         happiness += 10;
+         System.out.println("you both tried to invent a new shape. it tired the thing");
+         } else if (choice == 3) {
+         energy += 75;
+         hunger += 2;
+         System.out.println("zzzzzzzzzzzz");
+         } else if (choice == 4) {
+         energy -= 15;
+         hunger += 2;
+         System.out.println(" it hated it"); 
+         }
+            }
+          }
+        }
+     } 
+         
 
 
       // TODO 4:
@@ -53,6 +86,18 @@ public class VirtualPet {
       // Did the player quit?
       //
       // Print the appropriate ending message.
+      if (happiness >= 15) {
+      System.out.println("sufficiently happy");
+      } 
+      if (hunger >= 10){
+      System.out.println("thing got too hungry");
+      }
+      if (energy <= 0) {
+      System.out.println("ran out of energy");
+      }
+      if (choice == 5) {
+      System.out.println("goodbye");
+      }
       input.close();
    }
 }
