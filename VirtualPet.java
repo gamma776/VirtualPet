@@ -10,11 +10,16 @@ public class VirtualPet {
       int hunger = 5;
       int energy = 5;
       
+      String defaultName = "peanut";
+      String petName = defaultName;
+      
       int choice = 0;
       
       System.out.println("Welcome to Virtual Pet Simulator!");
-      System.out.println("Your pet's name is Mr. Pickles.");
-
+      System.out.println("Please enter a name for your pet.");
+if (petName == defaultName) {
+ petName = input.nextLine();
+ } 
       // TODO 1:
       // Create a while loop that continues while:
       // happiness < 15
@@ -53,11 +58,11 @@ public class VirtualPet {
          hunger -= 6;
          happiness -= 3;
          energy -= 2;
-         System.out.println("you fed Mr. Pickles, awesome."); 
+         System.out.println("you fed "+ petName +", awesome."); 
     } else if (choice == 2) {
          energy -= 10;
          happiness += 10;
-         System.out.println("you both tried to invent a new shape. it tired Mr. Pickles.");
+         System.out.println("you both tried to invent a new shape. it tired " + petName);
          } else if (choice == 3) {
          energy += 75;
          hunger += 2;
@@ -65,7 +70,7 @@ public class VirtualPet {
          } else if (choice == 4) {
          energy -= 15;
          hunger += 2;
-         System.out.println("Mr. Pickles hated it."); 
+         System.out.println(petName +" hated it."); 
          } else if ((choice > 5) || (choice <= 0)) {
          System.out.println("Not a choice");
          }
@@ -86,13 +91,13 @@ public class VirtualPet {
       //
       // Print the appropriate ending message.
       if (happiness >= 15) {
-      System.out.println("Mr. Pickles is sufficiently happy.");
+      System.out.println(petName +" is sufficiently happy.");
       } 
         else if (hunger >= 10){
-      System.out.println("Mr. Pickles got too hungry.");
+      System.out.println(petName + " got too hungry.");
       }
       else if (energy <= 0) {
-      System.out.println("Mr. Pickles ran out of energy.");
+      System.out.println(petName + " ran out of energy.");
       }
       else if (choice == 5) {
       System.out.println("Goodbye.");
