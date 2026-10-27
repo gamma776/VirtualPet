@@ -66,6 +66,8 @@ public class VirtualPet {
          energy -= 15;
          hunger += 2;
          System.out.println("Mr. Pickles hated it."); 
+         } else if ((choice > 5) || (choice <= 0)) {
+         System.out.println("Not a choice");
          }
          
           }
