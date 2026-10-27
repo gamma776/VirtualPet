@@ -21,10 +21,7 @@ public class VirtualPet {
       // hunger < 10
       // energy > 0
       // choice != 5
-   while (happiness < 15) {
-    if (hunger < 10) {
-    if (energy > 0) {
-    if (choice != 5) {
+   while (((happiness < 15) && (hunger < 10)) && ((energy > 0) && (choice!= 5))) {
     
            
      
@@ -56,7 +53,7 @@ public class VirtualPet {
          hunger -= 6;
          happiness -= 3;
          energy -= 2;
-         System.out.println("you fed the thing,awesome"); 
+         System.out.println("you fed the thing, awesome"); 
     } else if (choice == 2) {
          energy -= 10;
          happiness += 10;
@@ -70,10 +67,10 @@ public class VirtualPet {
          hunger += 2;
          System.out.println(" it hated it"); 
          }
-            }
+         
           }
-        }
-     } 
+       
+     
          
 
 
@@ -89,13 +86,13 @@ public class VirtualPet {
       if (happiness >= 15) {
       System.out.println("sufficiently happy");
       } 
-      if (hunger >= 10){
+        else if (hunger >= 10){
       System.out.println("thing got too hungry");
       }
-      if (energy <= 0) {
+      else if (energy <= 0) {
       System.out.println("ran out of energy");
       }
-      if (choice == 5) {
+      else if (choice == 5) {
       System.out.println("goodbye");
       }
       input.close();
