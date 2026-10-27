@@ -53,11 +53,11 @@ public class VirtualPet {
          hunger -= 6;
          happiness -= 3;
          energy -= 2;
-         System.out.println("you fed the thing, awesome"); 
+         System.out.println("you fed Mr. Pickles, awesome."); 
     } else if (choice == 2) {
          energy -= 10;
          happiness += 10;
-         System.out.println("you both tried to invent a new shape. it tired the thing");
+         System.out.println("you both tried to invent a new shape. it tired Mr. Pickles.");
          } else if (choice == 3) {
          energy += 75;
          hunger += 2;
@@ -65,7 +65,7 @@ public class VirtualPet {
          } else if (choice == 4) {
          energy -= 15;
          hunger += 2;
-         System.out.println(" it hated it"); 
+         System.out.println("Mr. Pickles hated it."); 
          }
          
           }
@@ -84,16 +84,16 @@ public class VirtualPet {
       //
       // Print the appropriate ending message.
       if (happiness >= 15) {
-      System.out.println("thing is sufficiently happy");
+      System.out.println("Mr. Pickles is sufficiently happy.");
       } 
         else if (hunger >= 10){
-      System.out.println("thing got too hungry");
+      System.out.println("Mr. Pickles got too hungry.");
       }
       else if (energy <= 0) {
-      System.out.println("thing ran out of energy");
+      System.out.println("Mr. Pickles ran out of energy.");
       }
       else if (choice == 5) {
-      System.out.println("goodbye");
+      System.out.println("Goodbye.");
       }
       input.close();
    }
