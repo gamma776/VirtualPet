@@ -10,6 +10,8 @@ public class VirtualPet {
       int hunger = 5;
       int energy = 5;
       
+      int random = (int) (Math.random() * 10);
+      
       String defaultName = "peanut";
       String petName = defaultName;
       
@@ -64,9 +66,14 @@ if (petName == defaultName) {
          happiness += 10;
          System.out.println("you both tried to invent a new shape. it tired " + petName);
          } else if (choice == 3) {
+         if (random > 4) {
          energy += 75;
          hunger += 2;
          System.out.println("zzzzzzzzzzzz");
+         } else { 
+         energy = 0;
+         System.out.println("somehow, " + petName + " just passed out immediately");
+         }
          } else if (choice == 4) {
          energy -= 15;
          hunger += 2;
