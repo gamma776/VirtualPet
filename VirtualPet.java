@@ -40,6 +40,9 @@ if (petName == defaultName) {
       
 
          System.out.println("What would you like to do?");
+         if (happiness < 0 ) {
+         System.out.println(petName + " is miserable");
+         }
          System.out.println("1. Feed");
          System.out.println("2. Play");
          System.out.println("3. Sleep");
