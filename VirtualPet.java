@@ -84,13 +84,13 @@ public class VirtualPet {
       //
       // Print the appropriate ending message.
       if (happiness >= 15) {
-      System.out.println("sufficiently happy");
+      System.out.println("thing is sufficiently happy");
       } 
         else if (hunger >= 10){
       System.out.println("thing got too hungry");
       }
       else if (energy <= 0) {
-      System.out.println("ran out of energy");
+      System.out.println("thing ran out of energy");
       }
       else if (choice == 5) {
       System.out.println("goodbye");
