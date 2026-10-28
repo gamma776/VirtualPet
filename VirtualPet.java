@@ -60,26 +60,30 @@ if (petName == defaultName) {
          //
          // Print a funny message for each action.
          if (choice == 1) {
-         hunger -= 6;
-         happiness -= 3;
-         energy -= 2;
+         hunger -= 3;
+         happiness ++;
+         
          System.out.println("you fed "+ petName +", awesome."); 
     } else if (choice == 2) {
-         energy -= 10;
-         happiness += 10;
-         System.out.println("you both tried to invent a new shape. it tired " + petName);
+         energy -= 2;
+         happiness += 3;
+         hunger += 2;
+         
+         System.out.println("you both tried to invent a new shape. it tired " + petName +".");
          } else if (choice == 3) {
          if (random > 4) {
-         energy += 75;
-         hunger += 2;
+         energy += 3;
+         hunger += 1;
+         happiness -= 1;
          System.out.println("zzzzzzzzzzzz");
          } else { 
          energy = 0;
-         System.out.println("somehow, " + petName + " just passed out immediately");
+         System.out.println("somehow, " + petName + " shut down.");
          }
          } else if (choice == 4) {
-         energy -= 15;
-         hunger += 2;
+         energy -= 1;
+         hunger += 1;
+         happiness += 2;
          System.out.println(petName +" hated it."); 
          } else if ((choice > 5) || (choice <= 0)) {
          System.out.println("Not a choice");
